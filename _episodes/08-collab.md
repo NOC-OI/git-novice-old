@@ -61,17 +61,18 @@ exactly the same way as we've been doing before:
 ~~~
 $ cd ~/Desktop/aber-pubs
 $ nano aberpubs.csv
-$ cat pluto.txt
+$ cat aberpubs.csv
 ~~~
 {: .language-bash}
 
 ~~~
-Express Cafe,cafe,Vlad,black pudding,-4.0,52.4
+name,symbol,creator,comments,lon,lat
+Express Cafe,cafe,Vlad,black pudding,-4.081978,52.414381
 ~~~
 {: .output}
 
 ~~~
-$ git add pluto.txt
+$ git add aberpubs.csv
 $ git commit -m "Adding Express Cafe"
 ~~~
 {: .language-bash}
@@ -154,24 +155,19 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://github.com/colinsauze/aber-pubs
  * branch            main     -> FETCH_HEAD
    9272da5..29aba7c  main     -> origin/main
 Updating 9272da5..29aba7c
 Fast-forward
- pluto.txt | 1 +
+ aberpubs.csv | 1 +
  1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+ create mode 100644 aberpubs.csv
 ~~~
 {: .output}
 
 Now the three repositories (Owner's local, Collaborator's local, and Owner's on
 GitHub) are back in sync.
-
-
-
-
-
 
 > ## A Basic Collaborative Workflow
 >
@@ -189,24 +185,30 @@ GitHub) are back in sync.
 > read and review.
 {: .callout}
 
-> ## Switch Roles and Repeat
->
-> Switch roles and repeat the whole process.
+> ## Group exercise
+> 1. Everyone in group should clone the repository git@github.com:colinsauze/aber-pubs.git (using SSH), or if you are unable to use SSH then clone https://github.com/colinsauze/aber-pubs.git
+> 2. Find the longditude and latitude of your favourite pub, cafe, restaurant, etc. The website https://www.latlong.net/ can help you do this. 
+> 3. Add a new line to aberpubs.csv with the following fields seprated by commas: The name of the location, a symbol (bar, cafe, restaurant), your name, a comment about the location, the longitude (note this should be negative for the Western Hemisphere, including most of the UK) and latitude. 
+> 4. Add/Commit this change to your local repository.
+> 5. Push your changes to the upstream repository.
+> 6. This will almost certainly result in a merge conflict error. This is supposed to happen!
+> 7. Edit your aberpubs.csv file again and resolve the merge conflict.
+> 8. Add/Commit this change and push it again.
 {: .challenge}
 
 > ## Review Changes
 >
 > The Owner pushed commits to the repository without giving any information
-> to the Collaborator. How can the Collaborator find out what has changed with
+> to the Collaborator. How can the Collaborator(s) find out what has changed with
 > command line? And on GitHub?
 >
 > > ## Solution
-> > On the command line, the Collaborator can use ```git fetch origin main```
+> > On the command line, the Collaborator(s) can use ```git fetch origin main```
 > > to get the remote changes into the local repository, but without merging
 > > them. Then by running ```git diff main origin/main``` the Collaborator
 > > will see the changes output in the terminal.
 > >
-> > On GitHub, the Collaborator can go to the repository and click on 
+> > On GitHub, the Collaborator(s) can go to the repository and click on 
 > > "commits" to view the most recent commits pushed to the repository.
 > {: .solution}
 {: .challenge}
@@ -225,6 +227,6 @@ GitHub) are back in sync.
 > ## Version History, Backup, and Version Control
 >
 > Some backup software can keep a history of the versions of your files. They also
-> allows you to recover specific versions. How is this functionality different from version control?
+> allow you to recover specific versions. How is this functionality different from version control?
 > What are some of the benefits of using version control, Git and GitHub?
 {: .challenge}
