@@ -7,9 +7,11 @@ questions:
 objectives:
 - "Explain what conflicts are and when they can occur."
 - "Resolve conflicts resulting from a merge."
+- "Understand how to create a pull request."
 keypoints:
 - "Conflicts occur when two or more people change the same lines of the same file."
 - "The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved."
+- "Pull requests are a better way to manage several people working on the same files at the same time."
 ---
 
 As soon as people can work in parallel, they'll likely step on each other's
@@ -538,21 +540,21 @@ Conflicts can also be minimized with project management strategies:
 As you have seen, multiple people working on the same repository can cause a lot of problems. Github provides another way to collaborate called pull requests. In these each person makes their own copy of the repository on Github, this is known as a fork. Instead of working in the same repository as everyone else, each person works on their own fork. When they are ready to send the changes back to the main repository they create a pull request (literally asking the owner of the repository to do a git pull from theirs). Github wraps this in a nice interface, which allows you to write a comment about what you changed, for the owner to review your changes (and possibly request you make more before they accept it) and for them to finally accept or reject them. Once they are accepted the changes from your fork are merged into the upstream repository. If there are any conflicts then it will be up to the owner of the upstream repository to resolve them.
 
 > ## Pull Requesting Changes
-> Create a fork of the aberpubs repository by visiting https://github.com/colinsauze/aber-pubs and clicking on the fork link near the top right hand corner.
-> Create an additional change to the aberpubs.csv file in the repository.
-> Github should now tell you that your fork is "1 commit ahead" of the upstream repository and offer a "Contribute" button to start the pull request.
-> Click this and choose "Open Pull Request".
-> The next screen will highlight the differences between your version and the upstream one. Go ahead and click "Create pull request".
-> The repository owner should now get an alert about your pull request and can choose whether to merge it or not.
+> * Create a fork of the aberpubs repository by visiting https://github.com/colinsauze/aber-pubs and clicking on the fork link near the top right hand corner.
+> * Create an additional change to the aberpubs.csv file in the repository.
+> * Github should now tell you that your fork is "1 commit ahead" of the upstream repository and offer a "Contribute" button to start the pull request.
+> * Click this and choose "Open Pull Request".
+> * The next screen will highlight the differences between your version and the upstream one. Go ahead and click "Create pull request".
+> * The repository owner should now get an alert about your pull request and can choose whether to merge it or not.
 >
 > When do you think it is best to use pull requests and when is it best to allow multiple people to write to the same repository?
 {: .challenge}
 
 > ## Making additional changes to a Pull Request
-> Create another pull request using the same method as above.
-> After submitting the pull request, you decide to make another change either because you found a mistake or the upstream repository owner asked you to fix something.
-> Make this change to your fork and push them to github.
-> What happens to the pull request?
+> * Create another pull request using the same method as above.
+> *After submitting the pull request, you decide to make another change either because you found a mistake or the upstream repository owner asked you to fix something.
+> *Make this change to your fork and push them to github.
+> * What happens to the pull request?
 > > ## Solution
 > > The pull request should automatically update with any additional changes you make.
 > {: .solution}
