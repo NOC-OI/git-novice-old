@@ -191,15 +191,13 @@ GitHub) are back in sync.
 > 3. Add a new line to aberpubs.csv with the following fields seprated by commas: The name of the location, a symbol (bar, cafe, restaurant), your name, a comment about the location, the longitude (note this should be negative for the Western Hemisphere, including most of the UK) and latitude. 
 > 4. Add/Commit this change to your local repository.
 > 5. Push your changes to the upstream repository.
-> 6. This will almost certainly result in a merge conflict error. This is supposed to happen!
-> 7. Edit your aberpubs.csv file again and resolve the merge conflict.
-> 8. Add/Commit this change and push it again.
+> 6. Unless you are the first person to push to the repository, this will almost certainly result in a merge conflict error since multiple people have edited the same line. We'll deal with how to resolve this in the next section.
 {: .challenge}
 
 > ## Review Changes
 >
 > The Owner pushed commits to the repository without giving any information
-> to the Collaborator. How can the Collaborator(s) find out what has changed with
+> to the Collaborator(s). How can the Collaborator(s) find out what has changed with
 > command line? And on GitHub?
 >
 > > ## Solution
