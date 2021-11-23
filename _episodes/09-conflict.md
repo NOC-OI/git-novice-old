@@ -552,8 +552,8 @@ As you have seen, multiple people working on the same repository can cause a lot
 
 > ## Making additional changes to a Pull Request
 > * Create another pull request using the same method as above.
-> *After submitting the pull request, you decide to make another change either because you found a mistake or the upstream repository owner asked you to fix something.
-> *Make this change to your fork and push them to github.
+> * After submitting the pull request, you decide to make another change either because you found a mistake or the upstream repository owner asked you to fix something.
+> * Make this change to your fork and push them to github.
 > * What happens to the pull request?
 > > ## Solution
 > > The pull request should automatically update with any additional changes you make.
