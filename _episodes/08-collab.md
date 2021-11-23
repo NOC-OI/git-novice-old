@@ -12,10 +12,9 @@ keypoints:
 - "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
 ---
 
-For the next step, get into pairs.  One person will be the "Owner" and the other
-will be the "Collaborator". The goal is that the Collaborator add changes into
-the Owner's repository. We will switch roles at the end, so both persons will
-play Owner and Collaborator.
+For the next step, we will work in a group to all share the same repository. One person will be the "Owner" and the others
+will be "Collaborators". The goal is that the Collaborators add changes into
+the Owner's repository. 
 
 > ## Practicing By Yourself
 >
@@ -38,19 +37,20 @@ Once there she can accept access to the Owner's repo.
 Next, the Collaborator needs to download a copy of the Owner's repository to her
 machine. This is called "cloning a repo".
 
+We'll be using a repository listing the locations of people's favourite pubs, restaurants, cafes and just general favourite places to go. You can find this repository at https://github.com/colinsauze/aber-pubs
+
 To clone the Owner's repo into
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone https://github.com/colinsauze/aber-pubs ~/Desktop/aber-pubs
 ~~~
 {: .language-bash}
 
-Replace 'vlad' with the Owner's username.
 
 If you choose to clone without the clone path
-(`~/Desktop/vlad-planets`) specified at the end,
-you will clone inside your own planets folder!
+(`~/Desktop/aber-pubs`) specified at the end,
+you will clone inside your own aber-pubs folder!
 Make sure to navigate to the `Desktop` folder first.
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
@@ -59,26 +59,26 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/Desktop/vlad-planets
-$ nano pluto.txt
+$ cd ~/Desktop/aber-pubs
+$ nano aberpubs.csv
 $ cat pluto.txt
 ~~~
 {: .language-bash}
 
 ~~~
-It is so a planet!
+Express Cafe,cafe,Vlad,black pudding,-4.0,52.4
 ~~~
 {: .output}
 
 ~~~
 $ git add pluto.txt
-$ git commit -m "Add notes about Pluto"
+$ git commit -m "Adding Express Cafe"
 ~~~
 {: .language-bash}
 
 ~~~
  1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+ create mode 100644 aberpubs.csv
 ~~~
 {: .output}
 
@@ -96,7 +96,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To https://github.com/colinsauze/aber-pubs.git
    9272da5..29aba7c  main -> main
 ~~~
 {: .output}
@@ -167,6 +167,11 @@ Fast-forward
 
 Now the three repositories (Owner's local, Collaborator's local, and Owner's on
 GitHub) are back in sync.
+
+
+
+
+
 
 > ## A Basic Collaborative Workflow
 >
