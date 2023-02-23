@@ -211,20 +211,4 @@ GitHub) are back in sync.
 > {: .solution}
 {: .challenge}
 
-> ## Comment Changes in GitHub
->
-> The Collaborator has some questions about one line change made by the Owner and
-> has some suggestions to propose.
->
-> With GitHub, it is possible to comment the diff of a commit. Over the line of
-> code to comment, a blue comment icon appears to open a comment window.
->
-> The Collaborator posts its comments and suggestions using GitHub interface.
-{: .challenge}
-
-> ## Version History, Backup, and Version Control
->
-> Some backup software can keep a history of the versions of your files. They also
-> allow you to recover specific versions. How is this functionality different from version control?
-> What are some of the benefits of using version control, Git and GitHub?
 {: .challenge}
