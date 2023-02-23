@@ -505,6 +505,10 @@ As you have seen, multiple people working on the same repository can cause a lot
 > * The repository owner should now get an alert about your pull request and can choose whether to merge it or not.
 >
 > When do you think it is best to use pull requests and when is it best to allow multiple people to write to the same repository?
+> 
+> > ## Solution
+> > Pull requests are best for larger projects where you want to control or at least review any changes. This does require the project's owners to spend time reviewing any pull requests. 
+> > Smaller projects where all the developers trust each other might be better suited to allowing multiple people direct write access.
 {: .challenge}
 
 > ## Making additional changes to a Pull Request
