@@ -492,49 +492,6 @@ Conflicts can also be minimized with project management strategies:
 > {: .solution}
 {: .challenge}
 
-> ## A Typical Work Session
->
-> You sit down at your computer to work on a shared project that is tracked in a
-> remote Git repository. During your work session, you take the following
-> actions, but not in this order:
->
-> - *Make changes* by appending the number `100` to a text file `numbers.txt`
-> - *Update remote* repository to match the local repository
-> - *Celebrate* your success with some fancy beverage(s)
-> - *Update local* repository to match the remote repository
-> - *Stage changes* to be committed
-> - *Commit changes* to the local repository
->
-> In what order should you perform these actions to minimize the chances of
-> conflicts? Put the commands above in order in the *action* column of the table
-> below. When you have the order right, see if you can write the corresponding
-> commands in the *command* column. A few steps are populated to get you
-> started.
->
-> |order|action . . . . . . . . . . |command . . . . . . . . . . |
-> |-----|---------------------------|----------------------------|
-> |1    |                           |                            |
-> |2    |                           | `echo 100 >> numbers.txt`  |
-> |3    |                           |                            |
-> |4    |                           |                            |
-> |5    |                           |                            |
-> |6    | Celebrate!                | `AFK`                      |
->
-> > ## Solution
-> >
-> > |order|action . . . . . . |command . . . . . . . . . . . . . . . . . . . |
-> > |-----|-------------------|----------------------------------------------|
-> > |1    | Update local      | `git pull origin main`                     |
-> > |2    | Make changes      | `echo 100 >> numbers.txt`                    |
-> > |3    | Stage changes     | `git add numbers.txt`                        |
-> > |4    | Commit changes    | `git commit -m "Add 100 to numbers.txt"`     |
-> > |5    | Update remote     | `git push origin main`                     |
-> > |6    | Celebrate!        | `AFK`                                        |
-> >
-> {: .solution}
-{: .challenge}
-
-
 ## Pull Requests
 
 As you have seen, multiple people working on the same repository can cause a lot of problems. Github provides another way to collaborate called pull requests. In these each person makes their own copy of the repository on Github, this is known as a fork. Instead of working in the same repository as everyone else, each person works on their own fork. When they are ready to send the changes back to the main repository they create a pull request (literally asking the owner of the repository to do a git pull from theirs). Github wraps this in a nice interface, which allows you to write a comment about what you changed, for the owner to review your changes (and possibly request you make more before they accept it) and for them to finally accept or reject them. Once they are accepted the changes from your fork are merged into the upstream repository. If there are any conflicts then it will be up to the owner of the upstream repository to resolve them.
