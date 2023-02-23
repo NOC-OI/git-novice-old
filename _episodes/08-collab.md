@@ -37,20 +37,20 @@ Once there she can accept access to the Owner's repo.
 Next, the Collaborator needs to download a copy of the Owner's repository to her
 machine. This is called "cloning a repo".
 
-We'll be using a repository listing the locations of people's favourite pubs, restaurants, cafes and just general favourite places to go. You can find this repository at https://github.com/colinsauze/aber-pubs
+We'll be using a repository listing the locations of people's favourite pubs, restaurants, cafes and just general favourite places to go. You can find this repository at [https://github.com/NOC-OI/favourite-places](https://github.com/NOC-OI/favourite-places)
 
 To clone the Owner's repo into
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/colinsauze/aber-pubs ~/Desktop/aber-pubs
+$ git clone git@github.com:NOC-OI/favourite-places.git ~/Desktop/favourite-places
 ~~~
 {: .language-bash}
 
 
 If you choose to clone without the clone path
-(`~/Desktop/aber-pubs`) specified at the end,
-you will clone inside your own aber-pubs folder!
+(`~/Desktop/favourite-places`) specified at the end,
+you will clone inside your own favourite-places folder!
 Make sure to navigate to the `Desktop` folder first.
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
@@ -59,9 +59,9 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/Desktop/aber-pubs
-$ nano aberpubs.csv
-$ cat aberpubs.csv
+$ cd ~/Desktop/favourite-places
+$ nano places.csv
+$ cat places.csv
 ~~~
 {: .language-bash}
 
@@ -72,14 +72,14 @@ Express Cafe,cafe,Vlad,black pudding,-4.081978,52.414381
 {: .output}
 
 ~~~
-$ git add aberpubs.csv
+$ git add places.csv
 $ git commit -m "Adding Express Cafe"
 ~~~
 {: .language-bash}
 
 ~~~
  1 file changed, 1 insertion(+)
- create mode 100644 aberpubs.csv
+ create mode 100644 places.csv
 ~~~
 {: .output}
 
@@ -97,7 +97,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/colinsauze/aber-pubs.git
+To git@github.com:NOC-OI/favourite-places.git
    9272da5..29aba7c  main -> main
 ~~~
 {: .output}
@@ -155,14 +155,14 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/colinsauze/aber-pubs
+From git@github.com:NOC-OI/favourite-places.git
  * branch            main     -> FETCH_HEAD
    9272da5..29aba7c  main     -> origin/main
 Updating 9272da5..29aba7c
 Fast-forward
- aberpubs.csv | 1 +
+ places.csv | 1 +
  1 file changed, 1 insertion(+)
- create mode 100644 aberpubs.csv
+ create mode 100644 places.csv
 ~~~
 {: .output}
 
@@ -186,9 +186,9 @@ GitHub) are back in sync.
 {: .callout}
 
 > ## Group exercise
-> 1. Everyone in group should clone the repository git@github.com:colinsauze/aber-pubs.git (using SSH), or if you are unable to use SSH then clone https://github.com/colinsauze/aber-pubs.git
-> 2. Find the longditude and latitude of your favourite pub, cafe, restaurant, etc. The website https://www.latlong.net/ can help you do this. 
-> 3. Add a new line to aberpubs.csv with the following fields seprated by commas: The name of the location, a symbol (bar, cafe, restaurant), your name, a comment about the location, the longitude (note this should be negative for the Western Hemisphere, including most of the UK) and latitude. 
+> 1. Everyone in group should clone the repository git@github.com:NOC-OI/favourite-places.git (using SSH), or if you are unable to use SSH then clone https://github.com/NOC-OI/favourite-places.git
+> 2. Find the longditude and latitude of your favourite pub, cafe, restaurant, etc. The website https://www.latlong.net/ or https://www.gps-coordinates.net/ can help you do this. 
+> 3. Add a new line to places.csv with the following fields seprated by commas: The name of the location, a symbol (bar, cafe, restaurant), your name, a comment about the location, the longitude (note this should be negative for the Western Hemisphere, including most of the UK) and latitude. 
 > 4. Add/Commit this change to your local repository.
 > 5. Push your changes to the upstream repository.
 > 6. Unless you are the first person to push to the repository, this will almost certainly result in a merge conflict error since multiple people have edited the same line. We'll deal with how to resolve this in the next section.
