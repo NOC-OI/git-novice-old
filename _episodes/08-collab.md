@@ -186,8 +186,8 @@ GitHub) are back in sync.
 {: .callout}
 
 > ## Group exercise
-> 1. Everyone in group should clone the repository git@github.com:NOC-OI/favourite-places.git (using SSH), or if you are unable to use SSH then clone https://github.com/NOC-OI/favourite-places.git
-> 2. Find the longditude and latitude of your favourite pub, cafe, restaurant, etc. The website https://www.latlong.net/ or https://www.gps-coordinates.net/ can help you do this. 
+> 1. Everyone in group should clone the repository git@github.com:NOC-OI/favourite-places.git (using SSH), or if you are unable to use SSH then clone [https://github.com/NOC-OI/favourite-places.git](https://github.com/NOC-OI/favourite-places.git).
+> 2. Find the longditude and latitude of your favourite pub, cafe, restaurant, etc. The website [https://www.latlong.net/](https://www.latlong.net/) or [https://www.gps-coordinates.net/](https://www.gps-coordinates.net/) can help you do this. 
 > 3. Add a new line to places.csv with the following fields seprated by commas: The name of the location, a symbol (bar, cafe, restaurant), your name, a comment about the location, the longitude (note this should be negative for the Western Hemisphere, including most of the UK) and latitude. 
 > 4. Add/Commit this change to your local repository.
 > 5. Push your changes to the upstream repository.
