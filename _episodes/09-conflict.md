@@ -21,7 +21,7 @@ different changes to each copy.  Version control helps us manage these
 [conflicts]({{ page.root}}{% link reference.md %}#conflict) by giving us tools to
 [resolve]({{ page.root }}{% link reference.md %}#resolve) overlapping changes.
 
-We already created a merge conflict during the exercise in the last section. Just in case we want to create another we can do the following.
+We already created a merge conflict during the exercise in the last section. Just in case we want to create another we can do the following. Do the following on a collaborators copy. This could be a second clone of the repository, another person's computer or via the Github web interface.
 
 ~~~
 $ cat places.csv
@@ -34,7 +34,7 @@ Sophie's,cafe,Colin Sauze,good cooked breakfasts,-4.08225,52.415250
 ~~~
 {: .output}
 
-Let's add a line to the collaborator's copy only:
+Let's change a line to the collaborator's copy only:
 
 ~~~
 $ nano places.csv
@@ -48,7 +48,7 @@ Sophie's,cafe,Colin Sauze,good cooked breakfasts and burgers,-4.08225,52.415250
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+and then commit the change:
 
 ~~~
 $ git add places.csv
@@ -61,6 +61,8 @@ $ git commit -m "Add a mention of burgers"
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
+
+and push it to github:
 
 ~~~
 $ git push origin main
@@ -80,9 +82,8 @@ To git@github.com:NOC-OI/favourite-places.git
 ~~~
 {: .output}
 
-Now let's have the owner
-make a different change to their copy
-*without* updating from GitHub:
+Now let's have the original owner make a different change to their copy
+*without* pulling from GitHub:
 
 ~~~
 $ nano places.csv
